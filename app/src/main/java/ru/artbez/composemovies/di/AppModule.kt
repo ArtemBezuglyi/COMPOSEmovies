@@ -20,7 +20,7 @@ object AppModule {
     fun provideRetrofit() : ApiService =
         Retrofit.Builder()
             .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory)
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)
 }
