@@ -9,10 +9,10 @@ import androidx.navigation.NavController
 import ru.artbez.composemovies.MainViewModel
 
 @Composable
-fun DetailsScreen(navController: NavController, viewModel: MainViewModel) {
+fun DetailsScreen(navController: NavController, viewModel: MainViewModel, itemId: String) {
     Surface(
         modifier = Modifier.fillMaxSize()
     ) {
-        Text(text = "Details screen")
+        Text(text = "Details screen - item id: $itemId")
     }
 }
