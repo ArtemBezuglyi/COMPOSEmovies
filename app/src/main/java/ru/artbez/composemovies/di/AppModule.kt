@@ -21,7 +21,7 @@ object AppModule {
     @Singleton
     fun provideRetrofit(baseUrl: String) : ApiService =
         Retrofit.Builder()
-            .baseUrl(baseUrl)
+            .baseUrl(baseUrl())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)

@@ -17,6 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import ru.artbez.composemovies.MainViewModel
 import ru.artbez.composemovies.data.models.Movies
@@ -43,6 +44,7 @@ fun MainScreen(navController: NavController, viewModel: MainViewModel) {
     }
 }
 
+@OptIn(ExperimentalCoilApi::class)
 @Composable
 fun MovieItem(item: Movies, navController: NavController){
 
